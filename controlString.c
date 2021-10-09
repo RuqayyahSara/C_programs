@@ -22,7 +22,10 @@ void main(){
     printf("%7s\n",s);
     printf("%.5s\n",s);          // prints only first 5 characters
     printf("%.s\n",s);           // prints nothing
-    printf("%-10.5s\n",s);        
+    printf("%-10.5s\n",s);   
+
+    // width and precision can also be passed as arguments
+    printf("%*.*f\n",8,2,342.3456); // width - 8 ; precision - 2     
 }
 
 // execute the above code and compare o/p's to understand control string better
