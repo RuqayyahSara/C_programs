@@ -27,4 +27,6 @@ void main(){
     printf("Address of n1 %p\n", &n1);
     printf("Octal: %o\n", oct);
     printf("Hexadecimal: %x\n", hex);
+        printf("Hexadecimal: %#x\n", hex); // prints the hexa '0x' notation as well
+
 }
