@@ -4,6 +4,7 @@ Control strings - flag, width, precision and specifiers
 
 #include<stdio.h>
 void main(){
+    char* s = "Hi Sara";
     int n1 = 288;
     float n5 = 12.6785;
     int hex = 0x72;
@@ -17,6 +18,11 @@ void main(){
     printf("%+8.2f\n", n5);      //   +12.68
     printf("%+10.2e\n", n5);     //  +1.27e+01
     printf("%#o\n",oct);         // 0162 - '#' flag prints o/p in octal notation
+
+    printf("%7s\n",s);
+    printf("%.5s\n",s);          // prints only first 5 characters
+    printf("%.s\n",s);           // prints nothing
+    printf("%-10.5s\n",s);        
 }
 
 // execute the above code and compare o/p's to understand control string better
