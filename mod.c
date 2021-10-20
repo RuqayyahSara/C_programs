@@ -12,6 +12,5 @@ void main(){
     // printf("%d\n",5/0);
     printf("%f\n",(float) 9/4); // 2.250000
     printf("%f\n", res);        // 2.000000 (if we don't typecast like previous line, it converts the int result to float)
-    printf("%d\n", 9/-4);       // -2
    // printf("%f\n", c%2);      // throws an error. % does not work on float or double
 }
