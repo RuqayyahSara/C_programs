@@ -18,19 +18,28 @@ METHOD 1 - Using nested loops
 #include<string.h>
 
 int main(){
-    int n,i,j,k;
+    int n,i,j,k,count=0;
 
     printf("Enter number of rows: ");
     scanf("%d", &n);
     
-    for(i=1; i<=n; i++){
+    for(i=1, k=n;i<=n;i++,--k){
         for(j=1; j<=i; j++){
             printf("%d",j);
+            count++;
         }
         printf(" x 8 + %d = ",i);
-        for(k=n; k>(n-i); k--){
-            printf("%d",k);
+        count++;
+        // for(k=n; k>(n-i); k--){
+        //     printf("%d",k);
+        // }
+        for(int l=9; l>=k; l--){
+        printf("%d",l);
+        count++;
         }
+
         printf("\n");
+        count++;
     } 
+    printf("The no:of printf operations = %d\n",count);
 }
