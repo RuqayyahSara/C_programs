@@ -16,29 +16,37 @@ METHOD 2 - Using string.h standard functions.
 
 #include<stdio.h>
 #include<string.h>
-
+#include<stdlib.h>
 int main(){
-    int n,i;
+    int n,i,k;
     char temp[50] = "";
     char temp1[50] = "";
-    char buffer[50];
+    char buffer[50] = "";
 
     printf("Enter number of rows: ");
     scanf("%d", &n);
 
-    int k=n;
-    for(i=1; i<=n; i++){
-        snprintf(buffer,2, "%d", i);
+    // for(i=1, k=n; i<=n; i++, k--){
+    //     sprintf(buffer,"%d", i);
+    //     strcat(temp,buffer);
+    //     strcat(temp," x 8 + ");
+    //     sprintf(buffer,"%d", i);
+    //     strcat(temp,buffer);
+    //     strcat(temp," = ");
+    //     sprintf(buffer,"%d", k);
+    //     strcat(temp1,buffer);
+    //     strcat(temp,temp1);
+    //     printf("%s\n",temp);
+    //     strcpy(&temp[i],&temp[strlen(temp)]);
+    // }   
+
+    // Optimizing the above solution
+
+    for(i=1, k=n; i<=n; i++, k--){
+        sprintf(buffer, "%d", i);
         strcat(temp,buffer);
-        strcat(temp," x 8 + ");
-        snprintf(buffer,2, "%d", i);
-        strcat(temp,buffer);
-        strcat(temp," = ");
-        snprintf(buffer,2, "%d", k);
+        sprintf(buffer, "%d", k);
         strcat(temp1,buffer);
-        strcat(temp,temp1);
-        printf("%s\n",temp);
-        k--;
-        strcpy(&temp[i],&temp[27]);
-    }   
+        printf("%s x 8 + %d = %s\n",temp,i,temp1);
+    }
 }
