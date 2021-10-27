@@ -18,7 +18,7 @@ Printing the below pattern using Standard String functions.
 
 int main(){
     int n,k;
-    char rhs[50] = "";
+    char rhs[50] = "8";
     char lhs[50] = "";
     char buffer[50] = "";
 
@@ -27,11 +27,7 @@ int main(){
 
     for(k=0;k<n;k++){
         if(k==0){
-            sprintf(buffer, "%d", 0);
-            strcat(lhs,buffer);
-            strcat(rhs,"8");
-            printf("%s . 9 + %d = %s\n",lhs,n-k-1,rhs);
-            strcpy(lhs,"");
+            printf("0 . 9 + 8 = 8\n");
         }
         else{
             sprintf(buffer, "%d", (n-k)+1);
