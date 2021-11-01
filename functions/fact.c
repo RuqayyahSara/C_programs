@@ -16,7 +16,7 @@ char *numberType(int x)
         return "Negative Number";
 }
 
-//definition - Factorial
+//definition - Factorial (iterative approach)
 int fact(int x)
 {
     if (x <= 0)
