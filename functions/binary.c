@@ -1,39 +1,31 @@
 #include <stdio.h>
-#include<string.h>
-
-// declaration
-char* binary(int x);
+void binary(int x);
 
 void main()
 {
     int x;
-    char* res="";
     printf("Enter x: ");
     scanf("%d", &x);
-    // binary(x);
-    sprintf(res,"%s",binary(x));
-    // printf("Binary of %d = %s\n", x, buffer);
+    binary(x);
+    printf("\n");
 }
 
-//definition - Factorial (recursive approach)
-char* binary(int x)
-{ 
-    char buffer[5]="";
+void binary(int x)
+{
 
-    if (x == 1){
-        strcat(buffer,"1");
-        return buffer;
+    if (x == 1)
+    {
+        printf("1");
     }
-    else if (x==0){
-        strcat(buffer,"0");
-        return buffer;
+
+    else if (x == 0)
+    {
+        printf("0");
     }
-    else if(x % 2 == 0){
-        strcat(buffer,"0");
-        binary(x/2);
-    }
-    else{
-        strcat(buffer,"1");
-        binary(x/2);
+
+    else
+    {
+        binary(x / 2);
+        printf("%d", x % 2);
     }
 }
